@@ -1,18 +1,19 @@
 import React from "react";
 import InfosUsuario from "./InfosUsuario";
 
-function CardVideo() {
-  const reproduzVideo = () => {
-    alert("o vídeo está sendo reproduzido");
-  };
-  const titulo ="Titulo" 
+
+function CardVideo(props) {
+  const usuario = {
+    nome: "Dog na floresta",
+    foto: "https://picsum.photos/id/1025/150/100",
+  };   
 
   return (
-    <div className="box-pagina-principal" onClick={reproduzVideo}>
-      <img src="https://picsum.photos/400/400?a=2 " alt="" />
-      <h4>{titulo}</h4>
-      <InfosUsuario/>
+    <div className="box-pagina-principal" onClick={props.reproduzVideo}>
+      <img src={props.video.imagem} alt="" />
+      <h4>Titulo:{props.video.titulo}</h4>
+      <InfosUsuario usuario={usuario} />
     </div>
-  )
-}    
-export default CardVideo
+  );
+}
+export default CardVideo;

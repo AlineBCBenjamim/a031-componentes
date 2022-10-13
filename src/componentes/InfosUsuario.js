@@ -1,12 +1,12 @@
 import React from "react";
-import img from "./img/Magico.jpg";
 
 
-function InfosUsuario(){
+
+function InfosUsuario(props){
     return(
         <div>
-            <img src={img} className="imagem-magico" alt="imagem do mágico segurando uma cartola me uma mão e na outra a varinha é realizando uma mágica"/>
-            <h4>Nome do autor</h4>
+            <img src={props.usuario.foto} className="imagem-magico" alt="Imagem do usuario"/>
+            <h4>Nome do Autor: {props.usuario.nome}</h4>
         </div>
         
     )
